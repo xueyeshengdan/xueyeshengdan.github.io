@@ -1,12 +1,10 @@
 function FindProxyForURL(url, host) {
-if (shExpMatch(url,"*.google.com/*")) {
-return "PROXY baidu.com";
-}
-if (shExpMatch(url, "*.wikipedia.com:*/*")) {
-return "SOCKS5 proxy.lxx1.com:808";
-}
-if (isInNet(host, "10.0.0.0",  "255.0.0.0")){
-return "DIRECT";
-}
-return "DIRECT; PROXY 192.168.1.1:808; SOCKS5 proxy.lxx1.com:808";
+  if (host == 'music.163.com' || host == 'ip.ws.126.net') {
+    return 'PROXY 207.148.27.51:80';
+  } else if (host == 'music.httpdns.c.163.com') {
+    return 'PROXY 127.0.0.1:9999';
+  } else if (host == 'upos-hz-mirrorakam.akamaized.net') {
+    return 'PROXY 23.205.116.72:443';
+  }
+  return 'DIRECT';
 }
