@@ -5,8 +5,8 @@ function FindProxyForURL(url, host) {
     return 'PROXY 127.0.0.1:9999';
   } else if (host == 'upos-hz-mirrorakam.akamaized.net') {
     return 'PROXY 23.205.116.72:443';
-  } else if (host == 'ceshiluyouqi.com') {
-    return 'PROXY 192.168.0.1';
+  } else if (host == 'shumeipai.com') {
+    return 'PROXY 192.168.0.66';
   }
   return 'DIRECT';
 }
